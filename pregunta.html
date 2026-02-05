@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Corazón de Melón 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background: linear-gradient(135deg,#ffd6e8,#ffb3c6);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:'Poppins',sans-serif;
+  overflow:hidden;
+}
+
+.card{
+  background:white;
+  border-radius:30px;
+  padding:40px;
+  width:500px;
+  text-align:center;
+  box-shadow:0 25px 60px rgba(0,0,0,.25);
+  animation: aparecer 1.5s ease;
+}
+
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:38px;
+  color:#a1124f;
+}
+
+p{
+  color:#5a1a3a;
+  font-size:16px;
+}
+
+.escena{
+  display:flex;
+  justify-content:space-around;
+  margin:30px 0;
+}
+
+
+.pixel{
+  display:grid;
+  grid-template-columns:repeat(12,16px);
+  gap:2px;
+}
+.p{width:16px;height:16px;background:transparent;}
+.rosa{background:#ff7eb3;}
+.rosa2{background:#ffb3d9;}
+.cafe{background:#8b5a2b;}
+.verde{background:#4caf50;}
+.verde2{background:#2e7d32;}
+.blanco{background:#fff;}
+.amarillo{background:#ffd700;}
+
+
+.botones{
+  margin-top:30px;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+}
+
+button{
+  font-size:18px;
+  padding:14px 38px;
+  border:none;
+  border-radius:40px;
+  cursor:pointer;
+  font-family:'Poppins';
+  transition:.4s;
+}
+
+.si{
+  background:linear-gradient(135deg,#ff4f9a,#ff8ccf);
+  color:white;
+  animation: latido 1.8s infinite;
+  box-shadow:0 10px 25px rgba(255,79,154,.5);
+}
+.si:hover{
+  transform:scale(1.15);
+}
+
+.no{
+  background:#bdbdbd;
+  color:white;
+}
+.no:hover{
+  transform:translateX(12px);
+}
+
+#mensaje{
+  margin-top:25px;
+  font-size:26px;
+  color:#a1124f;
+  font-family:'Playfair Display',serif;
+}
+
+@keyframes latido{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.1);}
+}
+
+@keyframes aparecer{
+  from{opacity:0;transform:scale(.85);}
+  to{opacity:1;transform:scale(1);}
+}
+
+
+.corazon{
+  position:absolute;
+  color:#ff2d55;
+  font-size:18px;
+  animation: flotar 7s linear forwards;
+}
+@keyframes flotar{
+  from{transform:translateY(100vh);}
+  to{transform:translateY(-10vh);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>Corazón de Melón</h1>
+
+  <p>
+    Nunca entendí el amor hasta que apareciste tú.
+Ahora sé que incluso un corazón hecho de huesos
+puede latir por alguien.
+  </p>
+
+  <div class="escena">
+
+  
+    <div class="pixel">
+      <div class="p"></div><div class="p"></div><div class="cafe"></div><div class="cafe"></div><div class="cafe"></div><div class="cafe"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div>
+      <div class="p"></div><div class="cafe"></div><div class="rosa2"></div><div class="rosa2"></div><div class="rosa2"></div><div class="rosa2"></div><div class="cafe"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div>
+      <div class="p"></div><div class="p"></div><div class="rosa"></div><div class="rosa"></div><div class="rosa"></div><div class="rosa"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div>
+      <div class="p"></div><div class="p"></div><div class="rosa"></div><div class="rosa"></div><div class="rosa"></div><div class="rosa"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div>
+    </div>
+
+    <div class="pixel">
+      <div class="p"></div><div class="p"></div><div class="amarillo"></div><div class="p"></div><div class="amarillo"></div><div class="p"></div><div class="amarillo"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div>
+      <div class="p"></div><div class="verde"></div><div class="verde"></div><div class="verde"></div><div class="verde"></div><div class="verde"></div><div class="verde"></div><div class="verde"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div>
+      <div class="verde"></div><div class="blanco"></div><div class="verde2"></div><div class="verde"></div><div class="verde"></div><div class="verde"></div><div class="verde2"></div><div class="blanco"></div><div class="verde"></div><div class="p"></div><div class="p"></div><div class="p"></div>
+      <div class="p"></div><div class="verde"></div><div class="verde"></div><div class="verde"></div><div class="verde"></div><div class="verde"></div><div class="verde"></div><div class="verde"></div><div class="p"></div><div class="p"></div><div class="p"></div><div class="p"></div>
+    </div>
+
+  </div>
+
+  <h2>¿Quieres ser mi San Valentín? 💖</h2>
+
+
+  <div class="botones">
+    <button class="si" onclick="si()">Sí 💕</button>
+    <button class="no" onclick="no()">No 💔</button>
+  </div>
+
+  <div id="mensaje"></div>
+</div>
+
+<script>
+function si(){
+  document.getElementById("mensaje").innerHTML =
+  "✨ Sabia Que Dirias Que Si✨<br>";
+}
+
+function no(){
+  document.getElementById("mensaje").innerHTML =
+  "No puedes decir que no";
+}
+
+setInterval(()=>{
+  const h=document.createElement("div");
+  h.className="corazon";
+  h.innerHTML="💖";
+  h.style.left=Math.random()*100+"vw";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),7000);
+},400);
+</script>
+
+</body>
+</html>
